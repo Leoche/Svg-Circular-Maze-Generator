@@ -5,7 +5,7 @@ window.onload = () => {
    let scc = new SvgCircularCircle();
    gui.add(scc, 'size', 10, 1000).onChange(scc.render);
    gui.add(scc, 'borderSize', 1, 5).onChange(scc.render);
-   gui.add(scc, 'corridorSize', 1, 50).onChange(scc.render);
+   gui.add(scc, 'corridorSize', 10, 50).onChange(scc.render);
    gui.add(scc, 'doorSize', 0, 30).onChange(scc.render);
    gui.add(scc, 'rotate').onChange(scc.render);
    gui.addColor(scc, 'color').onChange(scc.render);
