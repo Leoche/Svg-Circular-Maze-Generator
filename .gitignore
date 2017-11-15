@@ -2,3 +2,5 @@
 .idea
 node_modules
 npm-debug.log
+src/bundle.js
+src/bundle.js.map
