@@ -10,6 +10,7 @@ window.onload = () => {
    gui.add(scc, 'rotate').onChange(scc.render);
    gui.addColor(scc, 'color').onChange(scc.render);
    gui.addColor(scc, 'bgcolor').onChange(scc.render);
+   gui.add(scc, 'transparent').onChange(scc.render);
 }
 
 
@@ -21,6 +22,7 @@ let SvgCircularCircle = function() {
    this.color = "#ffb52a";
    this.bgcolor = "#111";
    this.rotate = true;
+   this.transparent = false;
    this.id = "scc-"+Math.round(Math.random()*100)
    this.createSVG = () => {
     let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
@@ -38,7 +40,7 @@ this.makeCircle = (svg,size) => {
  rect.setAttributeNS(null,'stroke-width',this.borderSize);
  rect.setAttributeNS(null,'stroke',this.color);
  rect.setAttributeNS(null,"stroke-linecap", "round")
- rect.setAttributeNS(null,'fill',this.bgcolor);
+ rect.setAttributeNS(null,'fill',(!this.transparent)?this.bgcolor:"none");
  if(this.rotate)
    rect.setAttributeNS(null,'transform','rotate('+Math.random()*360+','+this.size/2+', '+this.size/2+')');
 svg.appendChild(rect);
