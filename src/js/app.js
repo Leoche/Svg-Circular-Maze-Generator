@@ -33,7 +33,9 @@ let SvgCircularCircle = function() {
 		svg.setAttribute("id", this.id)
 		container.appendChild(svg)
 		for (var i = 0; i<this.size; i += this.corridorSize) {
-			this.makeCircle(svg,this.size-i)
+			if (this.size-i>this.corridorSize) {
+				this.makeCircle(svg,this.size-i)
+			}
 		}
 	}
 
@@ -74,7 +76,7 @@ let SvgCircularCircle = function() {
 		"M", start.x, start.y,
 		"A", radius, radius, 0, largeArcFlag, 0, end.x, end.y,
 		]
-		if (radius*2>this.corridorSize) {
+		if (radius*2>this.corridorSize+2) {
 			d.push("L", end.x, end.y+this.corridorSize/2)
 		}
 
