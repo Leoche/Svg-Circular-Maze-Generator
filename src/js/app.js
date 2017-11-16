@@ -32,7 +32,7 @@ let SvgCircularCircle = function() {
 		svg.setAttribute("height", this.size)
 		svg.setAttribute("id", this.id)
 		container.appendChild(svg)
-		for (var i =0 i<this.size i+=this.corridorSize) {
+		for (var i = 0; i<this.size; i += this.corridorSize) {
 			this.makeCircle(svg,this.size-i)
 		}
 	}
