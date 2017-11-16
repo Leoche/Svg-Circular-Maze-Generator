@@ -53,10 +53,6 @@ let SvgCircularCircle = function() {
 		svg.appendChild(rect)
 	}
 
-	this.circlePath = (cx, cy, r, d1, d2) => {
-		return 'M '+cx+' '+cy+' m -'+r+', 0 a '+r+','+r+' 0 1,0 '+(r*2)+',0 a '+r+','+r+' 0 1,0 -'+(r*2)+',0'
-	}
-
 	this.polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
 		var angleInRadians = (angleInDegrees-90) * Math.PI / 180.0
 
