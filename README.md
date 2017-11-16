@@ -1,14 +1,12 @@
-# LAB ES6 playground using Babel and webpack
+# SVG Circular maze
 
-### Simple playground that features ES6-compiling, automatic reloading dev server.
+Generate svg maze like this one (with variables controls):
 
-A minimal starter project to get you up and running with webpack, SCSS and ES6 via Babel.
+![SVG Circular maze](https://images.contentful.com/h9l0gdn8tp2b/2e151Gji7iGs6e6cMMsoeI/ca17d4a8bd3da1e25e078d9ecb31099c/maze.png)
 
 ## 01. Install
 
 ```
-git clone https://github.com/Leoche/lab-webpack-es6-boilerplate.git
-cd lab-webpack-es6-boilerplate
 npm i
 ```
 
